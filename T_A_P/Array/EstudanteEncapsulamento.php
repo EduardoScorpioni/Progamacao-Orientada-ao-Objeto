@@ -44,9 +44,9 @@ class Estudante {
         echo "Status: ";
 
         if ($this->EstaAprovado()) {
-            echo "Aprovado<br>";
+            return true;
         } else {
-            echo "Reprovado<br>";
+           return false;
         }
 
         echo "<hr>";
