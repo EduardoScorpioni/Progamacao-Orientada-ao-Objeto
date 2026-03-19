@@ -3,12 +3,12 @@
 //crie os metodos MostrarAtributos() e CalcularMedia();
 
     class Aluno{
-        Private $ra;
-        Private $nome;
-        Private $p1;
-        Private $p2;
-        Private $media;
-        Private $situacao;
+        public $ra;
+        public $nome;
+        public $p1;
+        public $p2;
+        public $media;
+        public $situacao;
 
 
         public function MostrarAtributos(){
