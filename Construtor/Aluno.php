@@ -1,38 +1,60 @@
 <?php
-//crie a classa alauno com os atributos, ra, nome, p1, p2, e media.
-//crie os metodos MostrarAtributos() e CalcularMedia();
+
 
     class Aluno{
-        public $ra;
-        public $nome;
-        public $p1;
-        public $p2;
-        public $media;
-        public $situacao;
+        Private $ra;
+        Private $nome;
+        
+    public static $contador = 1571432612000;
 
+    private function __construct($nome) {
+        self::$contador++;
+        $this ->ra = self::$contador;
+        $this ->nome = $nome;
 
-        public function MostrarAtributos(){
-            echo "RA: ".$this->ra."<hr> Nome: ".$this->nome." <hr>nota P1: ".$this->p1."<hr> nota P2: ".$this->p2."<hr> Media do Aluno ".$this->media." Situação:".$this->situacao;
-        }
-        public function CalcularMedia(){
-            $this->media = ( $this->p1 + $this->p2 ) / 2;
-            if ($this->media >=6)
-                $this->situacao = "aprovado";
-            else
-                $this->situacao = "reprovado";
-
-        }
     }
-$c1 = new Aluno(); //intancia o o objeto
-$c1->ra = 15961;
-$c1->nome ="Eduardo";
-$c1->p1 = 6;
-$c1->p2 = 10;
-$c1->media ;
-$c1->CalcularMedia();
-$c1->MostrarAtributos();
+
+    public function setRa($ra) {
+        $this->ra = $ra;
+    }
+
+    public function setNome($nome) {
+        $this->nome = $nome;
+    }
+
+    public function getRa() {
+        return $this->ra;
+    }
+
+    public function getNome() {
+        return $this->nome;
+    }
+
+    public static function getTotalAlunos(){
+        
+        return self::$contador - 157143261200;
+    }
+
+    public function MostrarTudo(){
+        echo "Nome".$this->getNome()."<br>";
+        echo "RA".$this->getRa()."<br>";
+        echo "QTD".$this->getTotalAlunos()."<br>";
+    }
+
+    
 
 
+      
 
+    }
+
+$e1 = new Aluno("edu");
+$e1 ->MostrarTudo;
+
+$e2 = new Estudante("igor");
+$e2 ->MostrarTudo;
+
+$e3 = new Estudante("TAO");
+$e3 ->MostrarTudo;
 
 ?>
