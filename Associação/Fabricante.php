@@ -1,46 +1,37 @@
-    <?php
+<?php
 
-        class Produto{
-            private $descricao;
-            private $estoque;
-            private $preco;
-            private $fabricante;
-           
+class Fabricante {
+    private $nome;
+    private $endereco;
+    private $documento;
 
-            public function __construct ($descricao,$estoque,$preco,$fabricante){
-                $this -> descricao = $descricao;
-                 $this -> estoque = $estoque;
-                  $this -> preco = $preco;
-                   $this -> fabricante = $fabricante;
-            }
-            public function setDescri($descricao){
-                $this -> descricao = $descricao;
+    public function __construct($nome, $endereco, $documento) {
+        $this->nome = $nome;
+        $this->endereco = $endereco;
+        $this->documento = $documento;
+    }
 
-            }
-            public function setEstoque($estoque){
-                $this -> estoque = $estoque;
+    public function setNome($nome) {
+        $this->nome = $nome;
+    }
 
-            }
-            public function setPreco($preco){
-                $this -> preco = $preco;
+    public function setEndereco($endereco) {
+        $this->endereco = $endereco;
+    }
 
-            }
-            public function setFabri($fabricante){
-                $this -> fabricante = $fabricante;
+    public function setDocumento($documento) {
+        $this->documento = $documento;
+    }
 
-            }
+    public function getNome() {
+        return $this->nome;
+    }
 
-            public function getDescri(){
-                return $this -> descricao;
-            }
-            public function getEstoque(){
-                return $this -> estoque;
-            }
-            public function getPreco(){
-                return $this -> preco;
-            }
-            public function getFabri(){
-                return $this -> fabricante;
-            }
-        } 
-        
+    public function getEndereco() {
+        return $this->endereco;
+    }
+
+    public function getDocumento() {
+        return $this->documento;
+    }
+}
