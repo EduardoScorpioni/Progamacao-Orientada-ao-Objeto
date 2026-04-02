@@ -7,11 +7,11 @@
             private $fabricante;
            
 
-            public function __construct ($descricao,$estoque,$preco,$fabricante){
+           public function __construct ($descricao, $estoque, $preco, Fabricante $fabricante){
                 $this -> descricao = $descricao;
-                 $this -> estoque = $estoque;
-                  $this -> preco = $preco;
-                   $this -> fabricante = $fabricante;
+                $this -> estoque = $estoque;
+                $this -> preco = $preco;
+                $this -> fabricante = $fabricante;
             }
             public function setDescri($descricao){
                 $this -> descricao = $descricao;
